@@ -50,7 +50,11 @@ export default function Home() {
       const res = await fetch('/api/run-test', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url, browsers, takeScreenshot }),
+        body: JSON.stringify({
+           url: url,
+           browsers: browsers,
+           takeScreenshot: takeScreenshot
+         }),
       });
 
       if (res.ok) alert('起動成功');

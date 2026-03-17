@@ -18,7 +18,7 @@ export async function POST(req: Request) {
           'X-GitHub-Api-Version': '2022-11-28', //APIバージョンの指定
         },
         body: JSON.stringify({
-          ref: 'master', 
+          ref: 'main', 
           inputs: { 
             target_url: url,
             browsers: browsers.join(','),

@@ -21,7 +21,7 @@ export async function POST(req: Request) {
           ref: 'master', 
           inputs: { 
             target_url: url,
-            browsers: browsers.join(','),
+            browsers: Array.isArray(browsers) ? browsers.join(',') : browsers,
             take_screenshot: String(takeScreenshot) 
           },
         }),

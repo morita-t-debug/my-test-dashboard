@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     const GITHUB_REPO = process.env.GITHUB_REPO;
 
     const res = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/playwright.yml/dispatches`,
+      `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/check.yml/dispatches`,
       {
         method: 'POST',
         headers: {

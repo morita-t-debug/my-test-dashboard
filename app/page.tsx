@@ -34,6 +34,11 @@ export default function Home() {
   }
 
   const runTest = async () => {
+    if (!url.trim()) {
+      alert("URLが記載されていないです。");
+      return;
+    }
+    
     setLoading(true);
     // チェックが入っているブラウザ名だけを取り出す
     const browsers = Object.entries(selectedBrowsers)
@@ -67,10 +72,10 @@ export default function Home() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>検品システム</h1>
+      <h1>テストシステム</h1>
 
       <div>
-        <label>調査URL: </label>
+        <label>調査したいURL: </label>
         <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />
       </div>
 

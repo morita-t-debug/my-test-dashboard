@@ -102,7 +102,10 @@ export default function Home() {
         <div key={r.id} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc' }}>
           <p>URL: {r.url} | ステータス: {r.status}</p>
           {r.screenshot && r.screenshot !== 'no_image_yet' && (
-            <img src={`data:image/png;base64,${r.screenshot}`} style={{ width: '400px' }} />
+            <img src={`data:image/png;base64,${r.screenshot}`}
+                 style={{ width: '400px' }} 
+                 alt = "screenshot"
+            />
           )}
         </div>
       ))}
